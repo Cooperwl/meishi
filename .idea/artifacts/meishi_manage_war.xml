@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="meishi-manage:war">
+    <output-path>$PROJECT_DIR$/meishi-manage/target</output-path>
+    <root id="archive" name="manage.war">
+      <element id="artifact" artifact-name="meishi-manage:war exploded" />
+    </root>
+  </artifact>
+</component>

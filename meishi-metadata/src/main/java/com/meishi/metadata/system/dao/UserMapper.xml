@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.meishi.metadata.system.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.meishi.metadata.system.entity.User">
+    <id column="Id" jdbcType="VARCHAR" property="id" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="USER_ACCOUNT" jdbcType="VARCHAR" property="userAccount" />
+    <result column="USER_FULLNAME" jdbcType="VARCHAR" property="userFullname" />
+    <result column="USER_LEVEL" jdbcType="SMALLINT" property="userLevel" />
+    <result column="USER_PASSWORD" jdbcType="VARCHAR" property="userPassword" />
+    <result column="USER_STATUS" jdbcType="SMALLINT" property="userStatus" />
+    <result column="ROLE_ID" jdbcType="VARCHAR" property="roleId" />
+    <result column="TYPE" jdbcType="CHAR" property="type" />
+    <result column="CREATE_USERID" jdbcType="VARCHAR" property="createUserid" />
+    <result column="USER_TELPHONE" jdbcType="VARCHAR" property="userTelphone" />
+    <result column="USER_EMAIL" jdbcType="VARCHAR" property="userEmail" />
+    <result column="IS_DELETE" jdbcType="SMALLINT" property="isDelete" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    Id, DESCRIPTION, USER_ACCOUNT, USER_FULLNAME, USER_LEVEL, USER_PASSWORD, USER_STATUS, 
+    ROLE_ID, TYPE, CREATE_USERID, USER_TELPHONE, USER_EMAIL, IS_DELETE
+  </sql>
+  <select id="selectByExample" parameterType="com.meishi.metadata.system.entity.UserExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where Id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from user
+    where Id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.meishi.metadata.system.entity.UserExample">
+    delete from user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.meishi.metadata.system.entity.User">
+    insert into user (Id, DESCRIPTION, USER_ACCOUNT, 
+      USER_FULLNAME, USER_LEVEL, USER_PASSWORD, 
+      USER_STATUS, ROLE_ID, TYPE, 
+      CREATE_USERID, USER_TELPHONE, USER_EMAIL, 
+      IS_DELETE)
+    values (#{id,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{userAccount,jdbcType=VARCHAR}, 
+      #{userFullname,jdbcType=VARCHAR}, #{userLevel,jdbcType=SMALLINT}, #{userPassword,jdbcType=VARCHAR}, 
+      #{userStatus,jdbcType=SMALLINT}, #{roleId,jdbcType=VARCHAR}, #{type,jdbcType=CHAR}, 
+      #{createUserid,jdbcType=VARCHAR}, #{userTelphone,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, 
+      #{isDelete,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.meishi.metadata.system.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="description != null">
+        DESCRIPTION,
+      </if>
+      <if test="userAccount != null">
+        USER_ACCOUNT,
+      </if>
+      <if test="userFullname != null">
+        USER_FULLNAME,
+      </if>
+      <if test="userLevel != null">
+        USER_LEVEL,
+      </if>
+      <if test="userPassword != null">
+        USER_PASSWORD,
+      </if>
+      <if test="userStatus != null">
+        USER_STATUS,
+      </if>
+      <if test="roleId != null">
+        ROLE_ID,
+      </if>
+      <if test="type != null">
+        TYPE,
+      </if>
+      <if test="createUserid != null">
+        CREATE_USERID,
+      </if>
+      <if test="userTelphone != null">
+        USER_TELPHONE,
+      </if>
+      <if test="userEmail != null">
+        USER_EMAIL,
+      </if>
+      <if test="isDelete != null">
+        IS_DELETE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="userAccount != null">
+        #{userAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="userFullname != null">
+        #{userFullname,jdbcType=VARCHAR},
+      </if>
+      <if test="userLevel != null">
+        #{userLevel,jdbcType=SMALLINT},
+      </if>
+      <if test="userPassword != null">
+        #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userStatus != null">
+        #{userStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="roleId != null">
+        #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="createUserid != null">
+        #{createUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="userTelphone != null">
+        #{userTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.meishi.metadata.system.entity.UserExample" resultType="java.lang.Integer">
+    select count(*) from user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update user
+    <set>
+      <if test="record.id != null">
+        Id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.description != null">
+        DESCRIPTION = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userAccount != null">
+        USER_ACCOUNT = #{record.userAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userFullname != null">
+        USER_FULLNAME = #{record.userFullname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userLevel != null">
+        USER_LEVEL = #{record.userLevel,jdbcType=SMALLINT},
+      </if>
+      <if test="record.userPassword != null">
+        USER_PASSWORD = #{record.userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userStatus != null">
+        USER_STATUS = #{record.userStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="record.roleId != null">
+        ROLE_ID = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        TYPE = #{record.type,jdbcType=CHAR},
+      </if>
+      <if test="record.createUserid != null">
+        CREATE_USERID = #{record.createUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userTelphone != null">
+        USER_TELPHONE = #{record.userTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userEmail != null">
+        USER_EMAIL = #{record.userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isDelete != null">
+        IS_DELETE = #{record.isDelete,jdbcType=SMALLINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update user
+    set Id = #{record.id,jdbcType=VARCHAR},
+      DESCRIPTION = #{record.description,jdbcType=VARCHAR},
+      USER_ACCOUNT = #{record.userAccount,jdbcType=VARCHAR},
+      USER_FULLNAME = #{record.userFullname,jdbcType=VARCHAR},
+      USER_LEVEL = #{record.userLevel,jdbcType=SMALLINT},
+      USER_PASSWORD = #{record.userPassword,jdbcType=VARCHAR},
+      USER_STATUS = #{record.userStatus,jdbcType=SMALLINT},
+      ROLE_ID = #{record.roleId,jdbcType=VARCHAR},
+      TYPE = #{record.type,jdbcType=CHAR},
+      CREATE_USERID = #{record.createUserid,jdbcType=VARCHAR},
+      USER_TELPHONE = #{record.userTelphone,jdbcType=VARCHAR},
+      USER_EMAIL = #{record.userEmail,jdbcType=VARCHAR},
+      IS_DELETE = #{record.isDelete,jdbcType=SMALLINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.meishi.metadata.system.entity.User">
+    update user
+    <set>
+      <if test="description != null">
+        DESCRIPTION = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="userAccount != null">
+        USER_ACCOUNT = #{userAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="userFullname != null">
+        USER_FULLNAME = #{userFullname,jdbcType=VARCHAR},
+      </if>
+      <if test="userLevel != null">
+        USER_LEVEL = #{userLevel,jdbcType=SMALLINT},
+      </if>
+      <if test="userPassword != null">
+        USER_PASSWORD = #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userStatus != null">
+        USER_STATUS = #{userStatus,jdbcType=SMALLINT},
+      </if>
+      <if test="roleId != null">
+        ROLE_ID = #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        TYPE = #{type,jdbcType=CHAR},
+      </if>
+      <if test="createUserid != null">
+        CREATE_USERID = #{createUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="userTelphone != null">
+        USER_TELPHONE = #{userTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        USER_EMAIL = #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null">
+        IS_DELETE = #{isDelete,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.meishi.metadata.system.entity.User">
+    update user
+    set DESCRIPTION = #{description,jdbcType=VARCHAR},
+      USER_ACCOUNT = #{userAccount,jdbcType=VARCHAR},
+      USER_FULLNAME = #{userFullname,jdbcType=VARCHAR},
+      USER_LEVEL = #{userLevel,jdbcType=SMALLINT},
+      USER_PASSWORD = #{userPassword,jdbcType=VARCHAR},
+      USER_STATUS = #{userStatus,jdbcType=SMALLINT},
+      ROLE_ID = #{roleId,jdbcType=VARCHAR},
+      TYPE = #{type,jdbcType=CHAR},
+      CREATE_USERID = #{createUserid,jdbcType=VARCHAR},
+      USER_TELPHONE = #{userTelphone,jdbcType=VARCHAR},
+      USER_EMAIL = #{userEmail,jdbcType=VARCHAR},
+      IS_DELETE = #{isDelete,jdbcType=SMALLINT}
+    where Id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

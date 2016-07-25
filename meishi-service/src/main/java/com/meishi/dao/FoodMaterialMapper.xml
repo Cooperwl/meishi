@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.meishi.dao.FoodMaterialMapper">
+  <resultMap id="BaseResultMap" type="com.meishi.entity.FoodMaterial">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="food_id" jdbcType="BIGINT" property="foodId" />
+    <result column="material_id" jdbcType="BIT" property="materialId" />
+    <result column="used_amount" jdbcType="VARCHAR" property="usedAmount" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, food_id, material_id, used_amount
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from food_material
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from food_material
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.meishi.entity.FoodMaterial">
+    insert into food_material (id, food_id, material_id, 
+      used_amount)
+    values (#{id,jdbcType=BIGINT}, #{foodId,jdbcType=BIGINT}, #{materialId,jdbcType=BIT}, 
+      #{usedAmount,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.meishi.entity.FoodMaterial">
+    insert into food_material
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="foodId != null">
+        food_id,
+      </if>
+      <if test="materialId != null">
+        material_id,
+      </if>
+      <if test="usedAmount != null">
+        used_amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="foodId != null">
+        #{foodId,jdbcType=BIGINT},
+      </if>
+      <if test="materialId != null">
+        #{materialId,jdbcType=BIT},
+      </if>
+      <if test="usedAmount != null">
+        #{usedAmount,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.meishi.entity.FoodMaterial">
+    update food_material
+    <set>
+      <if test="foodId != null">
+        food_id = #{foodId,jdbcType=BIGINT},
+      </if>
+      <if test="materialId != null">
+        material_id = #{materialId,jdbcType=BIT},
+      </if>
+      <if test="usedAmount != null">
+        used_amount = #{usedAmount,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.meishi.entity.FoodMaterial">
+    update food_material
+    set food_id = #{foodId,jdbcType=BIGINT},
+      material_id = #{materialId,jdbcType=BIT},
+      used_amount = #{usedAmount,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

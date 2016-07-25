@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="meishi-metadata:war">
+    <output-path>$PROJECT_DIR$/meishi-metadata/target</output-path>
+    <root id="archive" name="metadata.war">
+      <element id="artifact" artifact-name="meishi-metadata:war exploded" />
+    </root>
+  </artifact>
+</component>

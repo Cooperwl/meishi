@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.meishi.dao.FoodMapper">
+  <resultMap id="BaseResultMap" type="com.meishi.entity.Food">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cat_id" jdbcType="INTEGER" property="catId" />
+    <result column="chef_id" jdbcType="BIGINT" property="chefId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="sub_title" jdbcType="VARCHAR" property="subTitle" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="main_pic" jdbcType="VARCHAR" property="mainPic" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="keep_num" jdbcType="INTEGER" property="keepNum" />
+    <result column="score" jdbcType="VARCHAR" property="score" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, cat_id, chef_id, title, sub_title, description, main_pic, create_date, keep_num, 
+    score
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from food
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from food
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.meishi.entity.Food">
+    insert into food (id, cat_id, chef_id, 
+      title, sub_title, description, 
+      main_pic, create_date, keep_num, 
+      score)
+    values (#{id,jdbcType=BIGINT}, #{catId,jdbcType=INTEGER}, #{chefId,jdbcType=BIGINT}, 
+      #{title,jdbcType=VARCHAR}, #{subTitle,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{mainPic,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{keepNum,jdbcType=INTEGER}, 
+      #{score,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.meishi.entity.Food">
+    insert into food
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="catId != null">
+        cat_id,
+      </if>
+      <if test="chefId != null">
+        chef_id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="subTitle != null">
+        sub_title,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="mainPic != null">
+        main_pic,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="keepNum != null">
+        keep_num,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="catId != null">
+        #{catId,jdbcType=INTEGER},
+      </if>
+      <if test="chefId != null">
+        #{chefId,jdbcType=BIGINT},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="mainPic != null">
+        #{mainPic,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="keepNum != null">
+        #{keepNum,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.meishi.entity.Food">
+    update food
+    <set>
+      <if test="catId != null">
+        cat_id = #{catId,jdbcType=INTEGER},
+      </if>
+      <if test="chefId != null">
+        chef_id = #{chefId,jdbcType=BIGINT},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        sub_title = #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="mainPic != null">
+        main_pic = #{mainPic,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="keepNum != null">
+        keep_num = #{keepNum,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.meishi.entity.Food">
+    update food
+    set cat_id = #{catId,jdbcType=INTEGER},
+      chef_id = #{chefId,jdbcType=BIGINT},
+      title = #{title,jdbcType=VARCHAR},
+      sub_title = #{subTitle,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      main_pic = #{mainPic,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      keep_num = #{keepNum,jdbcType=INTEGER},
+      score = #{score,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

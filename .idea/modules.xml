@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/company/company.iml" filepath="$PROJECT_DIR$/company/company.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meishi-common/meishi-common.iml" filepath="$PROJECT_DIR$/meishi-common/meishi-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meishi-manage/meishi-manage.iml" filepath="$PROJECT_DIR$/meishi-manage/meishi-manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meishi-metadata/meishi-metadata.iml" filepath="$PROJECT_DIR$/meishi-metadata/meishi-metadata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meishi-metadata-api/meishi-metadata-api.iml" filepath="$PROJECT_DIR$/meishi-metadata-api/meishi-metadata-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meishi-service/meishi-service.iml" filepath="$PROJECT_DIR$/meishi-service/meishi-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meishi-service-api/meishi-service-api.iml" filepath="$PROJECT_DIR$/meishi-service-api/meishi-service-api.iml" />
+    </modules>
+  </component>
+</project>

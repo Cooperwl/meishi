@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC
+  "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration debug="true">
+	<!-- ====================================================================== -->
+	<!-- A P P E N D E R S -->
+	<!-- ====================================================================== -->
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd.MM.yyyy HH:mm:ss} %-5p [%c.%M():%L] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- ====================================================================== -->
+	<!-- L O G G E R S -->
+	<!-- ====================================================================== -->
+
+	<category additivity="false" name="com.wzc.app">
+		<level value="info" />
+		<appender-ref ref="console" />
+	</category>
+
+	<category name="org.springframework">
+	    <level value="info" />
+		<appender-ref ref="console" />
+	</category>
+	<category name="org.springframework.beans">
+	    <level value="warn" />
+		<appender-ref ref="console" />
+	</category>
+	<root>
+		<level value="debug" />
+		<appender-ref ref="console" />
+	</root>
+</log4j:configuration>
+
