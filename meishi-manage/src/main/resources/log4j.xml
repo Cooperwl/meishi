@@ -30,6 +30,14 @@
 	    <level value="warn" />
 		<appender-ref ref="console" />
 	</category>
+	<category name="com.alibaba.dubbo">
+	    <level value="warn" />
+		<appender-ref ref="console" />
+	</category>
+	<category name="org.apache.zookeeper">
+	    <level value="warn" />
+		<appender-ref ref="console" />
+	</category>
 	<root>
 		<level value="debug" />
 		<appender-ref ref="console" />

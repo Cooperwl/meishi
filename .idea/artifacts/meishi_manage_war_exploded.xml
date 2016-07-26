@@ -12,6 +12,7 @@
           </element>
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.6" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
           <element id="archive" name="meishi-metadata-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="meishi-metadata-api" />
           </element>
@@ -30,7 +31,6 @@
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
-          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
           <element id="library" level="project" name="Maven: org.apache.curator:curator-framework:2.5.0" />
           <element id="library" level="project" name="Maven: org.apache.curator:curator-client:2.5.0" />
