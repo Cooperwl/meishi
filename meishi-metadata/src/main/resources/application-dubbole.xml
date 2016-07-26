@@ -19,8 +19,8 @@
     <dubbo:protocol name="dubbo" port="20880" />
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.meishi.metadata.ws.meta.service.MenuService" ref="menuServiceImpl" version="0.0.0"/>
-    <dubbo:service interface="com.meishi.metadata.ws.meta.service.UserService" ref="userServiceImpl" version="0.0.0"/>
+    <dubbo:service interface="com.meishi.metadata.ws.system.service.MenuService" ref="menuServiceImpl" version="0.0.0"/>
+    <dubbo:service interface="com.meishi.metadata.ws.system.service.UserService" ref="userServiceImpl" version="0.0.0"/>
 
 
 

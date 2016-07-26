@@ -1,6 +1,6 @@
 package com.melody.meishi.authority.vo;
 
-import com.meishi.metadata.ws.meta.dto.UserDTO;
+import com.meishi.metadata.ws.system.dto.UserDTO;
 
 import java.io.Serializable;
 

@@ -1,8 +1,8 @@
 package com.melody.meishi.authority.controller;
 
 import com.meishi.common.result.*;
-import com.meishi.metadata.ws.meta.dto.UserDTO;
-import com.meishi.metadata.ws.meta.service.UserService;
+import com.meishi.metadata.ws.system.dto.UserDTO;
+import com.meishi.metadata.ws.system.service.UserService;
 import com.melody.meishi.authority.vo.LoginUserVo;
 import com.melody.meishi.base.BaseController;
 import org.slf4j.Logger;

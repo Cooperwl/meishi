@@ -1,4 +1,4 @@
-package com.meishi.metadata.ws.meta.service;
+package com.meishi.metadata.ws.system.service;
 
 import com.meishi.common.result.Result;
 

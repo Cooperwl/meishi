@@ -1,4 +1,4 @@
-package com.meishi.metadata.ws.meta.dto;
+package com.meishi.metadata.ws.system.dto;
 
 public class UserDTO {
 	private String id;
