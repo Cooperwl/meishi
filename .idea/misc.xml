@@ -11,12 +11,15 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/meishi-service-api/pom.xml" />
         <option value="$PROJECT_DIR$/company/pom.xml" />
-        <option value="$PROJECT_DIR$/meishi-service/pom.xml" />
         <option value="$PROJECT_DIR$/meishi-metadata-api/pom.xml" />
         <option value="$PROJECT_DIR$/meishi-metadata/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/meishi-service-api/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">

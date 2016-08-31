@@ -13,6 +13,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +27,7 @@ public class LoginController extends BaseController {
 
     private static Logger log = LoggerFactory.getLogger(LoginController.class);
 
-    @Autowired
+    @Resource
     private UserService userService;
 
     /**

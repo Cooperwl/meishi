@@ -28,7 +28,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="meishi-service-api" />
       </profile>
       <profile default="false" name="Annotation profile for meishi-common" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -42,7 +41,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="meishi-service" />
       </profile>
       <profile default="false" name="Annotation profile for meishi-metadata-api" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -65,9 +63,6 @@
       <module name="meishi-manage" target="1.7" />
       <module name="meishi-metadata" target="1.7" />
       <module name="meishi-metadata-api" target="1.7" />
-      <module name="meishi-service" target="1.7" />
-      <module name="meishi-service-api" target="1.7" />
-      <module name="meishi-test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

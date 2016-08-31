@@ -1,7 +1,6 @@
 package com.melody.meishi.crawle.pipline;
 
-import com.meishi.ws.dto.FoodDTO;
-import com.meishi.ws.dto.MeishiDTO;
+import com.meishi.metadata.ws.food.dto.FoodDTO;
 import org.apache.http.annotation.ThreadSafe;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -42,9 +41,8 @@ public class DouguoPipline implements Pipeline {
 				if (entry.getValue() instanceof FoodDTO) {
 					FoodDTO dto = (FoodDTO) entry.getValue();
 					writeFile(filePath+dto.getTitle()+".json", dto.toString());
-//					logger.error(dto.toString());
-				}
-				else {
+					logger.error(dto.toString());
+				}else {
 					System.out.println(entry.getKey() + ":\t"
 							+ entry.getValue());
 				}

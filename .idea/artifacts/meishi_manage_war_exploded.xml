@@ -16,16 +16,16 @@
           <element id="archive" name="meishi-metadata-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="meishi-metadata-api" />
           </element>
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.1.RELEASE" />
-          <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.8.4" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.3.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.8.4" />
           <element id="library" level="project" name="Maven: io.netty:netty:3.7.0.Final" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />

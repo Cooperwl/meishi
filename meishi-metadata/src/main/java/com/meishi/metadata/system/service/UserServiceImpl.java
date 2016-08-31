@@ -1,25 +1,23 @@
 package com.meishi.metadata.system.service;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.meishi.common.result.Result;
 import com.meishi.common.security.MD5;
 import com.meishi.metadata.system.dao.UserMapper;
 import com.meishi.metadata.system.entity.User;
 import com.meishi.metadata.system.entity.UserExample;
 import com.meishi.metadata.ws.system.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/7/25 0025.
  */
-@Component
-@Service
+@Service("UserServiceImpl")
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     public Result checkUser(String username, String password){

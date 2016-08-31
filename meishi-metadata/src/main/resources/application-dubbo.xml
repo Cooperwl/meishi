@@ -7,7 +7,7 @@
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 
-    <dubbo:application name="meishi_service_provider"/>
+    <dubbo:application name="meishi_metadata_provider"/>
 
     <!-- 使用multicast广播注册中心暴露服务地址-->
     <!--<dubbo:registry address="multicast://224.5.6.7:1234"/>-->
@@ -19,8 +19,8 @@
     <dubbo:protocol name="dubbo" port="20880" />
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.meishi.metadata.ws.system.service.MenuService" ref="menuServiceImpl" version="0.0.0"/>
-    <dubbo:service interface="com.meishi.metadata.ws.system.service.UserService" ref="userServiceImpl" version="0.0.0"/>
+    <dubbo:service interface="com.meishi.metadata.ws.system.service.MenuService" ref="MenuServiceImpl" version="0.0.1"/>
+    <dubbo:service interface="com.meishi.metadata.ws.system.service.UserService" ref="UserServiceImpl" version="0.0.1"/>
 
 
 

@@ -41,7 +41,9 @@
             <div class="row">
                 <div class="well col-md-5 center login-box">
                     <div class="blb-message">
+                        <%--<div class="alert alert-info">--%>
 
+                        <%--</div>--%>
                     </div>
                     <form id="loginForm" class="form-horizontal">
                         <fieldset>
@@ -95,17 +97,14 @@
             var bErrorStatus = true;
             var sErrorInfo = '';
 
-            if ($.trim(oName.val()) === '') {
-                sErrorInfo = '请填写账户名。';
+            if ($.trim(oName.val()) === '' || $.trim(oPassword.val()) === '') {
+                sErrorInfo = '请填写用户名和密码。';
                 bErrorStatus = false;
-            }
-            if ($.trim(oPassword.val()) === '') {
-                sErrorInfo = '请填写密码。';
-                bErrorStatus = false;
+                oErrorbox.show();
+                oErrorbox.html('<div class="alert alert-info">'+sErrorInfo+'</div>');
             }
 
             if (bErrorStatus) {
-                e.preventDefault();
                 $.post('${pageContext.request.contextPath}/authority/check', {
                     username : oName.val(),
                     password : oPassword.val()
@@ -116,10 +115,7 @@
                         oErrorbox.html('<div class="alert alert-info">'+res.status.msg+'</div>');
                     }
                 });
-            }else{
-                oErrorbox.html('<div class="alert alert-info">'+sErrorInfo+'</div>');
             }
-
             e.preventDefault();
         });
     });

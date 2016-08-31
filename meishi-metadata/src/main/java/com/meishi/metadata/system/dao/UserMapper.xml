@@ -335,4 +335,5 @@
       IS_DELETE = #{isDelete,jdbcType=SMALLINT}
     where Id = #{id,jdbcType=VARCHAR}
   </update>
+
 </mapper>

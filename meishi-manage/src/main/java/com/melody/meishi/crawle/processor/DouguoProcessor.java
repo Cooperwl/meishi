@@ -1,7 +1,9 @@
 package com.melody.meishi.crawle.processor;
 
 import com.meishi.common.util.StringUtils;
-import com.meishi.ws.dto.*;
+import com.meishi.metadata.ws.food.dto.FoodDTO;
+import com.meishi.metadata.ws.food.dto.FoodMaterialDTO;
+import com.meishi.metadata.ws.food.dto.FoodStepDTO;
 import com.melody.meishi.crawle.FoodIdGenerator;
 import com.melody.meishi.crawle.MaterialMap;
 import us.codecraft.webmagic.Page;

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 /**
  * Created by wangliang on 2016/7/7.
  */
-@Service
+@Service("MeishiServiceImpl")
 public class MeishiServiceImpl implements MeishiService {
 }
