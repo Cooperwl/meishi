@@ -26,61 +26,61 @@
                     "menus": [
                         {"menuid": "12", "menuname": "按菜系管理", "icon": "icon-sys",
                         "menus":[
-                            {"menuid": "91", "menuname": "川菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "92", "menuname": "湘菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "93", "menuname": "鲁菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "浙菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "京菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "徽菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "东北菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "西北菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "新疆菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "云南菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "台湾美食", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "香港美食", "icon": "icon-nav", "url": "demo2.html"}
+                            {"menuid": "91", "menuname": "川菜", "icon": "icon-nav", "url": "川菜.html"},
+                            {"menuid": "92", "menuname": "湘菜", "icon": "icon-nav", "url": "湘菜.html"},
+                            {"menuid": "93", "menuname": "鲁菜", "icon": "icon-nav", "url": "鲁菜.html"},
+                            {"menuid": "94", "menuname": "浙菜", "icon": "icon-nav", "url": "浙菜.html"},
+                            {"menuid": "94", "menuname": "京菜", "icon": "icon-nav", "url": "京菜.html"},
+                            {"menuid": "94", "menuname": "徽菜", "icon": "icon-nav", "url": "徽菜.html"},
+                            {"menuid": "94", "menuname": "东北菜", "icon": "icon-nav", "url": "东北菜.html"},
+                            {"menuid": "94", "menuname": "西北菜", "icon": "icon-nav", "url": "西北菜.html"},
+                            {"menuid": "94", "menuname": "新疆菜", "icon": "icon-nav", "url": "新疆菜.html"},
+                            {"menuid": "94", "menuname": "云南菜", "icon": "icon-nav", "url": "云南菜.html"},
+                            {"menuid": "94", "menuname": "台湾美食", "icon": "icon-nav", "url": "台湾美食.html"},
+                            {"menuid": "94", "menuname": "香港美食", "icon": "icon-nav", "url": "香港美食.html"}
                         ]},
                         {"menuid": "14", "menuname": "按菜式管理", "icon": "icon-sys",
                          "menus":[
-                            {"menuid": "91", "menuname": "家常菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "91", "menuname": "下酒菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "92", "menuname": "甜品", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "93", "menuname": "肉类", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "凉菜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "烘焙", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "煲汤", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "海鲜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "禽类", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "饮品", "icon": "icon-nav", "url": "demo2.html"}
+                            {"menuid": "91", "menuname": "家常菜", "icon": "icon-nav", "url": "家常菜.html"},
+                            {"menuid": "91", "menuname": "下酒菜", "icon": "icon-nav", "url": "下酒菜.html"},
+                            {"menuid": "92", "menuname": "甜品", "icon": "icon-nav", "url": "甜品.html"},
+                            {"menuid": "93", "menuname": "肉类", "icon": "icon-nav", "url": "肉类.html"},
+                            {"menuid": "94", "menuname": "凉菜", "icon": "icon-nav", "url": "凉菜.html"},
+                            {"menuid": "94", "menuname": "烘焙", "icon": "icon-nav", "url": "烘焙.html"},
+                            {"menuid": "94", "menuname": "煲汤", "icon": "icon-nav", "url": "煲汤.html"},
+                            {"menuid": "94", "menuname": "海鲜", "icon": "icon-nav", "url": "海鲜.html"},
+                            {"menuid": "94", "menuname": "禽类", "icon": "icon-nav", "url": "禽类.html"},
+                            {"menuid": "94", "menuname": "饮品", "icon": "icon-nav", "url": "饮品.html"}
                         ]},
                         {"menuid": "14", "menuname": "按场景管理", "icon": "icon-sys",
                         "menus":[
-                            {"menuid": "91", "menuname": "早餐", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "91", "menuname": "午餐", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "92", "menuname": "下午茶", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "93", "menuname": "晚餐", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "宵夜", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "生日聚会", "icon": "icon-nav", "url": "demo2.html"},
-                            {"menuid": "94", "menuname": "户外野炊", "icon": "icon-nav", "url": "demo2.html"}
+                            {"menuid": "91", "menuname": "早餐", "icon": "icon-nav", "url": "早餐.html"},
+                            {"menuid": "91", "menuname": "午餐", "icon": "icon-nav", "url": "午餐.html"},
+                            {"menuid": "92", "menuname": "下午茶", "icon": "icon-nav", "url": "下午茶.html"},
+                            {"menuid": "93", "menuname": "晚餐", "icon": "icon-nav", "url": "晚餐.html"},
+                            {"menuid": "94", "menuname": "宵夜", "icon": "icon-nav", "url": "宵夜.html"},
+                            {"menuid": "94", "menuname": "生日聚会", "icon": "icon-nav", "url": "生日聚会.html"},
+                            {"menuid": "94", "menuname": "户外野炊", "icon": "icon-nav", "url": "户外野炊.html"}
                         ]},
                         {"menuid": "13", "menuname": "推荐美食管理", "icon": "icon-sys", "url": "demo2.html"}
                     ]
                 }, {
                     "menuid": "2", "icon": "icon-sys", "menuname": "用户管理",
-                    "menus": [{"menuid": "21", "menuname": "角色管理", "icon": "icon-role", "url": "demo.html"},
-                                {"menuid": "21", "menuname": "权限设置", "icon": "icon-set", "url": "demo.html"},
-                                {"menuid": "21", "menuname": "用户管理", "icon": "icon-user", "url": "demo.html"},
-                                {"menuid": "22", "menuname": "视频监控", "icon": "icon-nav", "url": "demo1.html"}
+                    "menus": [{"menuid": "21", "menuname": "角色管理", "icon": "icon-role", "url": "角色管理.html"},
+                                {"menuid": "21", "menuname": "权限设置", "icon": "icon-set", "url": "权限设置.html"},
+                                {"menuid": "21", "menuname": "用户管理", "icon": "icon-user", "url": "用户管理.html"},
+                                {"menuid": "22", "menuname": "视频监控", "icon": "icon-nav", "url": "视频监控.html"}
                     ]
                 }, {
                     "menuid": "3", "icon": "icon-sys", "menuname": "系统设置",
-                    "menus": [{"menuid": "31", "menuname": "添加部门", "icon": "icon-nav", "url": "demo1.html"},
-                        {"menuid": "32", "menuname": "部门列表", "icon": "icon-nav", "url": "demo2.html"}
+                    "menus": [{"menuid": "31", "menuname": "添加部门", "icon": "icon-nav", "url": "添加部门.html"},
+                        {"menuid": "32", "menuname": "部门列表", "icon": "icon-nav", "url": "部门列表.html"}
                     ]
                 }, {
                     "menuid": "28", "icon": "icon-sys", "menuname": "财务管理",
-                    "menus": [{"menuid": "41", "menuname": "收支分类", "icon": "icon-nav", "url": "demo.html"},
-                        {"menuid": "42", "menuname": "报表统计", "icon": "icon-nav", "url": "demo1.html"},
-                        {"menuid": "43", "menuname": "添加支出", "icon": "icon-nav", "url": "demo2.html"}
+                    "menus": [{"menuid": "41", "menuname": "收支分类", "icon": "icon-nav", "url": "收支分类.html"},
+                        {"menuid": "42", "menuname": "报表统计", "icon": "icon-nav", "url": "报表统计.html"},
+                        {"menuid": "43", "menuname": "添加支出", "icon": "icon-nav", "url": "添加支出.html"}
                     ]
                 }, {
                     "menuid": "39", "icon": "icon-sys", "menuname": "商城管理",
@@ -166,9 +166,9 @@
     </div>
 </noscript>
 
-<div region="north" split="true" border="false" style="overflow: hidden; height: 30px;
+<div region="north" split="true" border="false" style="overflow: hidden; height: 50px;
         background: url(../img/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
-        line-height: 20px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
+        line-height: 40px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
     <span style="float:right; padding-right:20px;" class="head">欢迎 疯狂秀才
         <a href="#" id="editpass">修改密码</a>
         <a href="#" id="loginOut">安全退出</a>

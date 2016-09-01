@@ -21,20 +21,19 @@ function InitLeftMenu() {
     $("#nav").accordion({animate: false});
 
     $.each(_menus.menus, function (i, n) {
-        var menulist = '';
-        menulist += '<ul>';
+        var menulist = '<ul class="easyui-tree">';
         $.each(n.menus, function (j, o) {
-            var subMenuList = '';
-            //subMenuList += '<ul>';
-            //$.each(o.menus, function (j, o2) {
-            //    subMenuList += '<li><div><a ref="' + o2.menuid + '" href="#" rel="' + o2.url + '" ><span class="icon ' + o2.icon + '" >&nbsp;</span><span class="nav">' + o2.menuname + '</span></a></div></li> ';
-            //});
-            //subMenuList += '</ul>';
-            menulist += '<li><div><a ref="' + o.menuid + '" href="#" rel="' + o.url + '" ><span class="icon ' + o.icon + '" >&nbsp;</span><span class="nav">' + o.menuname + '</span>';
-            //if (o.menus != null){
-            //    menulist += subMenuList;
-            //}
-            menulist += '</a></div></li> ';
+            if (o.menus){
+                var subMenuList = '<ul>';
+                $.each(o.menus, function (j, o2) {
+                    subMenuList += '<li><span><a ref="' + o2.menuid + '" href="#" rel="' + o2.url + '" ><span class="icon ' + o2.icon + '" >&nbsp;</span><span class="nav">' + o2.menuname + '</span></a></span></li> ';
+                });
+                subMenuList += '</ul>';
+                menulist += '<li><span>'+o.menuname+'</span>'+subMenuList+'</li>';
+                //menulist += subMenuList;
+            }else {
+                menulist += '<li><span class="icon ' + o.icon + '"><a ref="' + o.menuid + '" href="#" rel="' + o.url + '" ><span class="nav">' + o.menuname + '</span></a></span></li>';
+            }
         })
         menulist += '</ul>';
 
