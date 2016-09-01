@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Shojumaru);
 
 select {
     background-color: #fff;
@@ -397,7 +398,7 @@ ul.ajax-loaders {
 
 .login-header {
     padding-top: 30px;
-    height: 150px;
+    height: 120px;
 }
 
 .pull-left {

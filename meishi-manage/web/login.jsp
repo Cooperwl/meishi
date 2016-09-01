@@ -1,8 +1,13 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="<%=basePath%>">
     <meta charset="utf-8">
     <title>登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +15,8 @@
     <meta name="author" content="Muhammad Usman">
 
     <!-- The styles -->
-    <link id="bs-css" href="${pageContext.request.contextPath}/css/bootstrap-cerulean.min.css" rel="stylesheet">
-
-    <link href="${pageContext.request.contextPath}/css/charisma-app.css" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="${pageContext.request.contextPath}/bower_components/jquery/jquery.min.js"></script>
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link href="css/charisma-app.css" rel="stylesheet">
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -23,7 +24,10 @@
     <![endif]-->
 
     <!-- The fav icon -->
-    <%--<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.ico">--%>
+    <%--<link rel="shortcut icon" href="img/favicon.ico">--%>
+
+    <script src="easyui/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
 </head>
 
@@ -79,8 +83,6 @@
 
     <!-- external javascript -->
 
-    <script src="${pageContext.request.contextPath}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 <script type="text/javascript">
 
 //    action="authority/check" method="post"
@@ -93,6 +95,7 @@
 
         //表单提交
         $('#login_btn').click( function(e) {
+            e.preventDefault();
             oErrorbox.hide();
             var bErrorStatus = true;
             var sErrorInfo = '';
@@ -105,7 +108,7 @@
             }
 
             if (bErrorStatus) {
-                $.post('${pageContext.request.contextPath}/login/check', {
+                $.post('login/check', {
                     username : oName.val(),
                     password : oPassword.val()
                 }, function(res) {
