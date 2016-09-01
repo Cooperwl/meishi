@@ -10,10 +10,11 @@
           <element id="archive" name="meishi-common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="meishi-common" />
           </element>
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.2" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.4" />
           <element id="archive" name="meishi-metadata-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="meishi-metadata-api" />
           </element>

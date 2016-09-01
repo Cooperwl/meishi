@@ -1,6 +1,9 @@
 package com.meishi.metadata.ws.system.dto;
 
-public class UserDTO {
+import java.io.Serializable;
+
+public class UserDTO implements Serializable{
+	private static final long serialVersionUID = 6017786893502237494L;
 	private String id;
 	private String roleID;
 	private String roleName;//角色名

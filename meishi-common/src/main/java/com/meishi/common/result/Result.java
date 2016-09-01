@@ -16,7 +16,7 @@ public class Result extends BaseResult implements Serializable {
 	private static final long serialVersionUID = -212271622516078317L;
 	private List<String> errors;
 	private Object returnValue;
-	
+
     public static Result successResult() {
         Result successInstance = new Result();
         successInstance.setSuccess(true);

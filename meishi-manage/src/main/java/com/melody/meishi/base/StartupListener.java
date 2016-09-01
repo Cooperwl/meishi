@@ -7,6 +7,7 @@
  */
 package com.melody.meishi.base;
 
+import com.meishi.common.result.StatusPool;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -52,7 +53,7 @@ public class StartupListener implements ServletContextListener {
 	 * 加载静态数据和基础数据
 	 */
 	private static void initData(ApplicationContext applicationContext) {
-
+//		StatusPool.getPool().init("status-message.properties");
 	}
 
 }

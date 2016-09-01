@@ -22,7 +22,7 @@ import java.util.Map;
  * Created by wangliang on 2016/7/22.
  */
 @Controller
-@RequestMapping("/authority")
+@RequestMapping("/login")
 public class LoginController extends BaseController {
 
     private static Logger log = LoggerFactory.getLogger(LoginController.class);
@@ -43,8 +43,7 @@ public class LoginController extends BaseController {
         RequestResult<Object> requestResult = RequestResult.successResult();
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
             log.error("用户名或密码为空，登录失败");
-            requestResult.setStatus(StatusPool.getPool().getStatus(StatusConstant.LOGIN_FAILED));
-            return requestResult;
+            return RequestResult.buildErrorRequest("用户名或密码为空，登录失败");
         }
 
         Result result = userService.checkUser(username, password);
@@ -52,18 +51,16 @@ public class LoginController extends BaseController {
             UserDTO userDTO = (UserDTO) result.getReturnValue();
             LoginUserVo userVo = new LoginUserVo(userDTO);
             super.setLoginUser(userVo);
-            Map<String, Object> map = new HashMap<String, Object>();
+            Map<String, Object> map = new HashMap<>();
             map.put("forwardUrl", request.getContextPath()+"/login/checkIn");
             requestResult.setData(map);
-            requestResult.setStatus(StatusUtils.getSuccessStatus());
             return requestResult;
         }else {
-            requestResult.setStatus(StatusPool.getPool().getStatus(StatusConstant.LOGIN_FAILED));
-            return requestResult;
+            return RequestResult.buildRequestFromResult(result);
         }
     }
 
-    @RequestMapping(value="/login/checkIn")
+    @RequestMapping(value="/checkIn")
     public String checkIn(HttpServletRequest request){
         return "index";
     }

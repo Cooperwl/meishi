@@ -105,11 +105,11 @@
             }
 
             if (bErrorStatus) {
-                $.post('${pageContext.request.contextPath}/authority/check', {
+                $.post('${pageContext.request.contextPath}/login/check', {
                     username : oName.val(),
                     password : oPassword.val()
                 }, function(res) {
-                    if (res.status.success) {
+                    if (res.success) {
                         location.href = res.data.forwardUrl;
                     } else {
                         oErrorbox.html('<div class="alert alert-info">'+res.status.msg+'</div>');

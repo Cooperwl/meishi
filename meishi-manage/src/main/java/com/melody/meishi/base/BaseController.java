@@ -35,11 +35,11 @@ public class BaseController {
 	 */
 	public Result validateLogin() {
 		logger.debug("==start validateLogin==");
-		Result result = new Result();
+		Result result = Result.successResult();
 		result.setSuccess(true);
-		Object userinfo = getRequest().getSession().getAttribute(CommonConstant.LOGIN_USER_INFO);
+		LoginUserVo userinfo = (LoginUserVo) getRequest().getSession().getAttribute(CommonConstant.LOGIN_USER_INFO);
         if (userinfo != null) {
-			result.setReturnValue((LoginUserVo) userinfo);
+			result.setReturnValue(userinfo);
 			return result;
 		} else {
 			result.setSuccess(false);

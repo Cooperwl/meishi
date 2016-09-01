@@ -1,6 +1,11 @@
 package com.meishi.metadata.system.entity;
 
-public class User {
+import com.meishi.metadata.base.BaseEntity;
+import com.meishi.metadata.ws.system.dto.UserDTO;
+
+public class User extends BaseEntity{
+
+
     private String id;
     private String description;
     private String userAccount;
@@ -117,5 +122,21 @@ public class User {
 
     public void setIsDelete(Short isDelete) {
         this.isDelete = isDelete;
+    }
+
+    public UserDTO toDTO(){
+        UserDTO dto = new UserDTO();
+        dto.setDescription(this.description);
+        dto.setId(this.id);
+        dto.setIsDelete(this.isDelete);
+        dto.setRoleID(this.roleId);
+        dto.setUserFullname(this.userFullname);
+        dto.setUserEmail(this.userEmail);
+        dto.setUserTelphone(this.userTelphone);
+        dto.setUserStatus(this.userStatus);
+        dto.setUserLevel(this.userLevel);
+        dto.setUserAccount(this.userAccount);
+
+        return dto;
     }
 }

@@ -5,6 +5,7 @@ import com.meishi.common.security.MD5;
 import com.meishi.metadata.system.dao.UserMapper;
 import com.meishi.metadata.system.entity.User;
 import com.meishi.metadata.system.entity.UserExample;
+import com.meishi.metadata.ws.system.dto.UserDTO;
 import com.meishi.metadata.ws.system.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +29,7 @@ public class UserServiceImpl implements UserService {
         criteria.andUserPasswordEqualTo(MD5.sign(password));
         List<User> users = userMapper.selectByExample(example);
         if (users != null && !users.isEmpty()){
-            result.setReturnValue(users.get(0));
+            result.setReturnValue(users.get(0).toDTO());
             return result;
         }
         result.setSuccess(false);
