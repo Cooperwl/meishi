@@ -10,6 +10,7 @@ import com.meishi.metadata.ws.system.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,6 +34,7 @@ public class UserServiceImpl implements UserService {
             return result;
         }
         result.setSuccess(false);
+        result.setErrors(Arrays.asList("用户名或密码错误，请重新输入"));
         return result;
     }
 }

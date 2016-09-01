@@ -33,7 +33,7 @@
 
             <div class="row">
                 <div class="col-md-12 center login-header">
-                    <h1>美食后台管理系统</h1>
+                    <h1>后台管理系统</h1>
                 </div>
                 <!--/span-->
             </div><!--/row-->
@@ -49,14 +49,14 @@
                         <fieldset>
                             <div class="input-group input-group-lg">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-                                <input type="text" class="form-control" placeholder="username" id="username">
+                                <input type="text" class="form-control" placeholder="请输入用户名" id="username">
                             </div>
                             <div class="clearfix"></div>
                             <br>
 
                             <div class="input-group input-group-lg">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-                                <input type="password" class="form-control" placeholder="password" id="password">
+                                <input type="password" class="form-control" placeholder="请输入密码" id="password">
                             </div>
                             <div class="clearfix"></div>
 
@@ -93,7 +93,7 @@
 
         //表单提交
         $('#login_btn').click( function(e) {
-
+            oErrorbox.hide();
             var bErrorStatus = true;
             var sErrorInfo = '';
 
@@ -112,11 +112,11 @@
                     if (res.success) {
                         location.href = res.data.forwardUrl;
                     } else {
-                        oErrorbox.html('<div class="alert alert-info">'+res.status.msg+'</div>');
+                        oErrorbox.show();
+                        oErrorbox.html('<div class="alert alert-info">'+res.errors[0]+'</div>');
                     }
                 });
             }
-            e.preventDefault();
         });
     });
 </script>
